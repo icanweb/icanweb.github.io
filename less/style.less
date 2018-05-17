@@ -1,0 +1,117 @@
+@width: 90%;
+@color: red;
+@color-link-hover: green;
+@color-link-active: black;
+@border: 1px solid black;
+
+.container {
+	width: @width;
+  margin: 0 auto;
+  background-color: @color;
+}
+
+.box {
+	width: @width/6;
+}
+
+ul {
+	@width: 80%;
+  width: @width;
+}
+
+a {
+  @width: 100px;
+	width: (@width)-20px;
+}
+
+
+
+ul {
+	list-style-type: none;
+  
+  li {
+  	color: @color;
+    
+      a {
+        text-decoration: none;
+      }
+  }
+  
+}
+
+.header {
+  width: @width;
+  &-link {
+  	color: @color;
+  }
+  &-logo {
+  	border: @border;
+  }
+}
+
+
+a {
+	text-decoration: none;
+  &:hover {
+  	color: @color-link-hover;
+  }
+  &:active {
+  	color: @color-link-active;
+  }
+}
+
+.txt() {
+	color: @color;
+  	font-size: 12px;
+  	font-family: Arial;
+  	font-weight: bold;
+  	font-style: normal;
+}
+
+.txt(@color, @size, @family, @weight, @style) {
+	color: @color;
+  	font-size: @size;
+  	font-family: @family;
+  	font-weight: @weight;
+  	font-style: @style;	
+}
+
+a {
+	.txt(red, 12px, Verdana, bold, italic);
+}
+
+p {
+	.txt(green, 10px, Arial, normal, normal)
+}
+
+
+
+a {
+	text-decoration: none;
+  	color: @color;
+    &:hover {
+      color: lighten(@color, 20);
+    }
+    &:active {
+      color: darken(@color, 20);
+    }
+}
+
+h1 {
+	color: @color;
+    &:hover {
+      color: spin(@color, 50);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
